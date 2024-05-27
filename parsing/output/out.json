@@ -1,0 +1,109 @@
+{
+    "file_input": [
+        {
+            "stmt": [
+                {
+                    "simple_stmts": [
+                        {
+                            "simple_stmt": [
+                                {
+                                    "expr_stmt": [
+                                        {
+                                            "testlist_star_expr": [
+                                                {
+                                                    "test": [
+                                                        {
+                                                            "or_test": [
+                                                                {
+                                                                    "and_test": [
+                                                                        {
+                                                                            "not_test": [
+                                                                                {
+                                                                                    "comparison": [
+                                                                                        {
+                                                                                            "expr": [
+                                                                                                {
+                                                                                                    "atom_expr": [
+                                                                                                        {
+                                                                                                            "atom": [
+                                                                                                                {
+                                                                                                                    "name": [
+                                                                                                                        "print"
+                                                                                                                    ]
+                                                                                                                }
+                                                                                                            ]
+                                                                                                        },
+                                                                                                        {
+                                                                                                            "trailer": [
+                                                                                                                "(",
+                                                                                                                {
+                                                                                                                    "arglist": [
+                                                                                                                        {
+                                                                                                                            "argument": [
+                                                                                                                                {
+                                                                                                                                    "test": [
+                                                                                                                                        {
+                                                                                                                                            "or_test": [
+                                                                                                                                                {
+                                                                                                                                                    "and_test": [
+                                                                                                                                                        {
+                                                                                                                                                            "not_test": [
+                                                                                                                                                                {
+                                                                                                                                                                    "comparison": [
+                                                                                                                                                                        {
+                                                                                                                                                                            "expr": [
+                                                                                                                                                                                {
+                                                                                                                                                                                    "atom_expr": [
+                                                                                                                                                                                        {
+                                                                                                                                                                                            "atom": [
+                                                                                                                                                                                                "\"Hello world\""
+                                                                                                                                                                                            ]
+                                                                                                                                                                                        }
+                                                                                                                                                                                    ]
+                                                                                                                                                                                }
+                                                                                                                                                                            ]
+                                                                                                                                                                        }
+                                                                                                                                                                    ]
+                                                                                                                                                                }
+                                                                                                                                                            ]
+                                                                                                                                                        }
+                                                                                                                                                    ]
+                                                                                                                                                }
+                                                                                                                                            ]
+                                                                                                                                        }
+                                                                                                                                    ]
+                                                                                                                                }
+                                                                                                                            ]
+                                                                                                                        }
+                                                                                                                    ]
+                                                                                                                },
+                                                                                                                ")"
+                                                                                                            ]
+                                                                                                        }
+                                                                                                    ]
+                                                                                                }
+                                                                                            ]
+                                                                                        }
+                                                                                    ]
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "<EOF>"
+    ]
+}
