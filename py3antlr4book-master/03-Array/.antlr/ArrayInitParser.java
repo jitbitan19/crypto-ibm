@@ -16,25 +16,25 @@ public class ArrayInitParser extends Parser {
 	protected static final PredictionContextCache _sharedContextCache =
 		new PredictionContextCache();
 	public static final int
-		T__0=1, T__1=2, T__2=3, INT=4, WS=5;
+		T__0=1, T__1=2, T__2=3, T__3=4, INT=5, WS=6;
 	public static final int
-		RULE_init = 0, RULE_value = 1;
+		RULE_line = 0, RULE_init = 1, RULE_value = 2;
 	private static String[] makeRuleNames() {
 		return new String[] {
-			"init", "value"
+			"line", "init", "value"
 		};
 	}
 	public static final String[] ruleNames = makeRuleNames();
 
 	private static String[] makeLiteralNames() {
 		return new String[] {
-			null, "'{'", "','", "'}'"
+			null, "';'", "'{'", "','", "'}'"
 		};
 	}
 	private static final String[] _LITERAL_NAMES = makeLiteralNames();
 	private static String[] makeSymbolicNames() {
 		return new String[] {
-			null, null, null, null, "INT", "WS"
+			null, null, null, null, null, "INT", "WS"
 		};
 	}
 	private static final String[] _SYMBOLIC_NAMES = makeSymbolicNames();
@@ -89,6 +89,40 @@ public class ArrayInitParser extends Parser {
 	}
 
 	@SuppressWarnings("CheckReturnValue")
+	public static class LineContext extends ParserRuleContext {
+		public InitContext init() {
+			return getRuleContext(InitContext.class,0);
+		}
+		public LineContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_line; }
+	}
+
+	public final LineContext line() throws RecognitionException {
+		LineContext _localctx = new LineContext(_ctx, getState());
+		enterRule(_localctx, 0, RULE_line);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(6);
+			init();
+			setState(7);
+			match(T__0);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
 	public static class InitContext extends ParserRuleContext {
 		public List<ValueContext> value() {
 			return getRuleContexts(ValueContext.class);
@@ -104,33 +138,33 @@ public class ArrayInitParser extends Parser {
 
 	public final InitContext init() throws RecognitionException {
 		InitContext _localctx = new InitContext(_ctx, getState());
-		enterRule(_localctx, 0, RULE_init);
+		enterRule(_localctx, 2, RULE_init);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(4);
-			match(T__0);
-			setState(5);
-			value();
+			setState(9);
+			match(T__1);
 			setState(10);
+			value();
+			setState(15);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
-			while (_la==T__1) {
+			while (_la==T__2) {
 				{
 				{
-				setState(6);
-				match(T__1);
-				setState(7);
+				setState(11);
+				match(T__2);
+				setState(12);
 				value();
 				}
 				}
-				setState(12);
+				setState(17);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			}
-			setState(13);
-			match(T__2);
+			setState(18);
+			match(T__3);
 			}
 		}
 		catch (RecognitionException re) {
@@ -158,22 +192,22 @@ public class ArrayInitParser extends Parser {
 
 	public final ValueContext value() throws RecognitionException {
 		ValueContext _localctx = new ValueContext(_ctx, getState());
-		enterRule(_localctx, 2, RULE_value);
+		enterRule(_localctx, 4, RULE_value);
 		try {
-			setState(17);
+			setState(22);
 			_errHandler.sync(this);
 			switch (_input.LA(1)) {
-			case T__0:
+			case T__1:
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(15);
+				setState(20);
 				init();
 				}
 				break;
 			case INT:
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(16);
+				setState(21);
 				match(INT);
 				}
 				break;
@@ -193,20 +227,23 @@ public class ArrayInitParser extends Parser {
 	}
 
 	public static final String _serializedATN =
-		"\u0004\u0001\u0005\u0014\u0002\u0000\u0007\u0000\u0002\u0001\u0007\u0001"+
-		"\u0001\u0000\u0001\u0000\u0001\u0000\u0001\u0000\u0005\u0000\t\b\u0000"+
-		"\n\u0000\f\u0000\f\t\u0000\u0001\u0000\u0001\u0000\u0001\u0001\u0001\u0001"+
-		"\u0003\u0001\u0012\b\u0001\u0001\u0001\u0000\u0000\u0002\u0000\u0002\u0000"+
-		"\u0000\u0013\u0000\u0004\u0001\u0000\u0000\u0000\u0002\u0011\u0001\u0000"+
-		"\u0000\u0000\u0004\u0005\u0005\u0001\u0000\u0000\u0005\n\u0003\u0002\u0001"+
-		"\u0000\u0006\u0007\u0005\u0002\u0000\u0000\u0007\t\u0003\u0002\u0001\u0000"+
-		"\b\u0006\u0001\u0000\u0000\u0000\t\f\u0001\u0000\u0000\u0000\n\b\u0001"+
-		"\u0000\u0000\u0000\n\u000b\u0001\u0000\u0000\u0000\u000b\r\u0001\u0000"+
-		"\u0000\u0000\f\n\u0001\u0000\u0000\u0000\r\u000e\u0005\u0003\u0000\u0000"+
-		"\u000e\u0001\u0001\u0000\u0000\u0000\u000f\u0012\u0003\u0000\u0000\u0000"+
-		"\u0010\u0012\u0005\u0004\u0000\u0000\u0011\u000f\u0001\u0000\u0000\u0000"+
-		"\u0011\u0010\u0001\u0000\u0000\u0000\u0012\u0003\u0001\u0000\u0000\u0000"+
-		"\u0002\n\u0011";
+		"\u0004\u0001\u0006\u0019\u0002\u0000\u0007\u0000\u0002\u0001\u0007\u0001"+
+		"\u0002\u0002\u0007\u0002\u0001\u0000\u0001\u0000\u0001\u0000\u0001\u0001"+
+		"\u0001\u0001\u0001\u0001\u0001\u0001\u0005\u0001\u000e\b\u0001\n\u0001"+
+		"\f\u0001\u0011\t\u0001\u0001\u0001\u0001\u0001\u0001\u0002\u0001\u0002"+
+		"\u0003\u0002\u0017\b\u0002\u0001\u0002\u0000\u0000\u0003\u0000\u0002\u0004"+
+		"\u0000\u0000\u0017\u0000\u0006\u0001\u0000\u0000\u0000\u0002\t\u0001\u0000"+
+		"\u0000\u0000\u0004\u0016\u0001\u0000\u0000\u0000\u0006\u0007\u0003\u0002"+
+		"\u0001\u0000\u0007\b\u0005\u0001\u0000\u0000\b\u0001\u0001\u0000\u0000"+
+		"\u0000\t\n\u0005\u0002\u0000\u0000\n\u000f\u0003\u0004\u0002\u0000\u000b"+
+		"\f\u0005\u0003\u0000\u0000\f\u000e\u0003\u0004\u0002\u0000\r\u000b\u0001"+
+		"\u0000\u0000\u0000\u000e\u0011\u0001\u0000\u0000\u0000\u000f\r\u0001\u0000"+
+		"\u0000\u0000\u000f\u0010\u0001\u0000\u0000\u0000\u0010\u0012\u0001\u0000"+
+		"\u0000\u0000\u0011\u000f\u0001\u0000\u0000\u0000\u0012\u0013\u0005\u0004"+
+		"\u0000\u0000\u0013\u0003\u0001\u0000\u0000\u0000\u0014\u0017\u0003\u0002"+
+		"\u0001\u0000\u0015\u0017\u0005\u0005\u0000\u0000\u0016\u0014\u0001\u0000"+
+		"\u0000\u0000\u0016\u0015\u0001\u0000\u0000\u0000\u0017\u0005\u0001\u0000"+
+		"\u0000\u0000\u0002\u000f\u0016";
 	public static final ATN _ATN =
 		new ATNDeserializer().deserialize(_serializedATN.toCharArray());
 	static {

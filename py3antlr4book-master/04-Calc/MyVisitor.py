@@ -18,7 +18,7 @@ class MyVisitor(LabeledExprVisitor):
         value = self.visit(ctx.expr())
         self.memory[name] = value
         print(f"{name} <-- {value}")
-        return value
+        # return value
 
     def visitInt(self, ctx):
         return ctx.INT().getText()
@@ -56,6 +56,7 @@ class MyVisitor(LabeledExprVisitor):
     #         return l + r
     #     else:
     #         return l - r
+
     def visitOp1(self, ctx: LabeledExprParser.Op1Context):
         # return super().visitOp1(ctx)
         l = int(self.visit(ctx.expr(0)))

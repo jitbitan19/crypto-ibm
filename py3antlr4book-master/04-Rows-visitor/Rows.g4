@@ -11,19 +11,17 @@ def column(self, value):
 
 }
 
-rows: (row NL)+ ;
+rows: (row NL)+;
 
 row
-locals [i = 0]
-    : (   STUFF
-{
+	locals[i = 0]: (
+		STUFF {
 $i = $i + 1
 if $i == self.column:
     print($STUFF.text)
 }
-      )+
-    ;
+	)+;
 
-TAB  :  '\t' -> skip ;   // match but don't pass to the parser
-NL   :  '\r'? '\n' ;     // match and pass to the parser
-STUFF:  ~[\t\r\n]+ ;     // match any chars except tab, newline
+TAB: '\t' -> skip; // match but don't pass to the parser
+NL: '\r'? '\n'; // match and pass to the parser
+STUFF: ~[\t\r\n]+; // match any chars except tab, newline

@@ -5,6 +5,7 @@ from antlr4 import *
 from antlr4.InputStream import InputStream
 from ExprLexer import ExprLexer
 from ExprParser import ExprParser
+from MyListener import MyListener
 
 if __name__ == '__main__':
     if len(sys.argv) > 1:
@@ -17,6 +18,5 @@ if __name__ == '__main__':
     parser = ExprParser(token_stream)
     tree = parser.prog()
 
-    lisp_tree_str = tree.toStringTree(recog=parser)
+    lisp_tree_str = tree.toStingTree(recog=parser)
     print(lisp_tree_str)
-

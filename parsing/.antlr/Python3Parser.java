@@ -4647,7 +4647,7 @@ public class Python3Parser extends Python3ParserBase {
 				setState(865);
 				signed_number();
 				setState(866);
-				if (!( this.CannotBePlusMinus() )) throw new FailedPredicateException(this, " this.CannotBePlusMinus() ");
+				if (!( self.CannotBePlusMinus() )) throw new FailedPredicateException(this, " self.CannotBePlusMinus() ");
 				}
 				break;
 			case 2:
@@ -4731,7 +4731,7 @@ public class Python3Parser extends Python3ParserBase {
 				setState(875);
 				signed_number();
 				setState(876);
-				if (!( this.CannotBePlusMinus() )) throw new FailedPredicateException(this, " this.CannotBePlusMinus() ");
+				if (!( self.CannotBePlusMinus() )) throw new FailedPredicateException(this, " self.CannotBePlusMinus() ");
 				}
 				break;
 			case 2:
@@ -5050,7 +5050,7 @@ public class Python3Parser extends Python3ParserBase {
 			setState(911);
 			name();
 			setState(912);
-			if (!( this.CannotBeDotLpEq() )) throw new FailedPredicateException(this, " this.CannotBeDotLpEq() ");
+			if (!( self.CannotBeDotLpEq() )) throw new FailedPredicateException(this, " self.CannotBeDotLpEq() ");
 			}
 		}
 		catch (RecognitionException re) {
@@ -5114,7 +5114,7 @@ public class Python3Parser extends Python3ParserBase {
 			setState(916);
 			attr();
 			setState(917);
-			if (!( this.CannotBeDotLpEq() )) throw new FailedPredicateException(this, " this.CannotBeDotLpEq() ");
+			if (!( self.CannotBeDotLpEq() )) throw new FailedPredicateException(this, " self.CannotBeDotLpEq() ");
 			}
 		}
 		catch (RecognitionException re) {
@@ -8950,28 +8950,28 @@ public class Python3Parser extends Python3ParserBase {
 	private boolean literal_pattern_sempred(Literal_patternContext _localctx, int predIndex) {
 		switch (predIndex) {
 		case 0:
-			return  this.CannotBePlusMinus() ;
+			return  self.CannotBePlusMinus() ;
 		}
 		return true;
 	}
 	private boolean literal_expr_sempred(Literal_exprContext _localctx, int predIndex) {
 		switch (predIndex) {
 		case 1:
-			return  this.CannotBePlusMinus() ;
+			return  self.CannotBePlusMinus() ;
 		}
 		return true;
 	}
 	private boolean pattern_capture_target_sempred(Pattern_capture_targetContext _localctx, int predIndex) {
 		switch (predIndex) {
 		case 2:
-			return  this.CannotBeDotLpEq() ;
+			return  self.CannotBeDotLpEq() ;
 		}
 		return true;
 	}
 	private boolean value_pattern_sempred(Value_patternContext _localctx, int predIndex) {
 		switch (predIndex) {
 		case 3:
-			return  this.CannotBeDotLpEq() ;
+			return  self.CannotBeDotLpEq() ;
 		}
 		return true;
 	}

@@ -191,49 +191,49 @@ public class Python3Lexer extends Python3LexerBase {
 	private void NEWLINE_action(RuleContext _localctx, int actionIndex) {
 		switch (actionIndex) {
 		case 0:
-			this.onNewLine();
+			self.onNewLine();
 			break;
 		}
 	}
 	private void OPEN_PAREN_action(RuleContext _localctx, int actionIndex) {
 		switch (actionIndex) {
 		case 1:
-			this.openBrace();
+			self.openBrace();
 			break;
 		}
 	}
 	private void CLOSE_PAREN_action(RuleContext _localctx, int actionIndex) {
 		switch (actionIndex) {
 		case 2:
-			this.closeBrace();
+			self.closeBrace();
 			break;
 		}
 	}
 	private void OPEN_BRACK_action(RuleContext _localctx, int actionIndex) {
 		switch (actionIndex) {
 		case 3:
-			this.openBrace();
+			self.openBrace();
 			break;
 		}
 	}
 	private void CLOSE_BRACK_action(RuleContext _localctx, int actionIndex) {
 		switch (actionIndex) {
 		case 4:
-			this.closeBrace();
+			self.closeBrace();
 			break;
 		}
 	}
 	private void OPEN_BRACE_action(RuleContext _localctx, int actionIndex) {
 		switch (actionIndex) {
 		case 5:
-			this.openBrace();
+			self.openBrace();
 			break;
 		}
 	}
 	private void CLOSE_BRACE_action(RuleContext _localctx, int actionIndex) {
 		switch (actionIndex) {
 		case 6:
-			this.closeBrace();
+			self.closeBrace();
 			break;
 		}
 	}
@@ -248,7 +248,7 @@ public class Python3Lexer extends Python3LexerBase {
 	private boolean NEWLINE_sempred(RuleContext _localctx, int predIndex) {
 		switch (predIndex) {
 		case 0:
-			return this.atStartOfInput();
+			return self.atStartOfInput();
 		}
 		return true;
 	}

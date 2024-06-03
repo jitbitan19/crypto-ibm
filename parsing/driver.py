@@ -45,6 +45,7 @@ from antlr4 import *
 from Python3Lexer import Python3Lexer
 from Python3Parser import Python3Parser
 import json
+import pyperclip
 
 # from Interp.ListenerInterp import ListenerInterp
 from antlr4.tree.Tree import TerminalNodeImpl
@@ -84,10 +85,13 @@ def main(argv):
     # tree = parser.single_input()
     tree = parser.file_input()
     tree_dict = get_node_text(tree, parser)
-    tr = Tree()
-    tr.dict_to_tree(tree_dict)
-    tr.bfs()
+
+    # print(tree_dict)
+    # tr = Tree()
+    # tr.dict_to_tree(tree_dict)
+    # tr.bfs()
     tree_json = json.dumps(tree_dict, indent=4)
+    pyperclip.copy(tree_json)
     with open("output/out.json", "w") as f:
         f.write(tree_json)
 

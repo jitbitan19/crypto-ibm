@@ -10,20 +10,20 @@ else:
 
 def serializedATN():
     return [
-        4,1,13,43,2,0,7,0,2,1,7,1,2,2,7,2,1,0,4,0,8,8,0,11,0,12,0,9,1,1,
-        1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,3,1,21,8,1,1,2,1,2,1,2,1,2,1,2,1,
-        2,1,2,3,2,30,8,2,1,2,1,2,1,2,1,2,1,2,1,2,5,2,38,8,2,10,2,12,2,41,
-        9,2,1,2,0,1,4,3,0,2,4,0,0,46,0,7,1,0,0,0,2,20,1,0,0,0,4,29,1,0,0,
-        0,6,8,3,2,1,0,7,6,1,0,0,0,8,9,1,0,0,0,9,7,1,0,0,0,9,10,1,0,0,0,10,
-        1,1,0,0,0,11,12,3,4,2,0,12,13,5,12,0,0,13,21,1,0,0,0,14,15,5,10,
-        0,0,15,16,5,1,0,0,16,17,3,4,2,0,17,18,5,12,0,0,18,21,1,0,0,0,19,
-        21,5,12,0,0,20,11,1,0,0,0,20,14,1,0,0,0,20,19,1,0,0,0,21,3,1,0,0,
-        0,22,23,6,2,-1,0,23,30,5,11,0,0,24,30,5,10,0,0,25,26,5,2,0,0,26,
-        27,3,4,2,0,27,28,5,3,0,0,28,30,1,0,0,0,29,22,1,0,0,0,29,24,1,0,0,
-        0,29,25,1,0,0,0,30,39,1,0,0,0,31,32,10,5,0,0,32,33,5,4,0,0,33,38,
-        3,4,2,6,34,35,10,4,0,0,35,36,5,5,0,0,36,38,3,4,2,5,37,31,1,0,0,0,
-        37,34,1,0,0,0,38,41,1,0,0,0,39,37,1,0,0,0,39,40,1,0,0,0,40,5,1,0,
-        0,0,41,39,1,0,0,0,5,9,20,29,37,39
+        4,1,9,43,2,0,7,0,2,1,7,1,2,2,7,2,1,0,4,0,8,8,0,11,0,12,0,9,1,1,1,
+        1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,3,1,21,8,1,1,2,1,2,1,2,1,2,1,2,1,2,
+        1,2,3,2,30,8,2,1,2,1,2,1,2,1,2,1,2,1,2,5,2,38,8,2,10,2,12,2,41,9,
+        2,1,2,0,1,4,3,0,2,4,0,0,46,0,7,1,0,0,0,2,20,1,0,0,0,4,29,1,0,0,0,
+        6,8,3,2,1,0,7,6,1,0,0,0,8,9,1,0,0,0,9,7,1,0,0,0,9,10,1,0,0,0,10,
+        1,1,0,0,0,11,12,3,4,2,0,12,13,5,8,0,0,13,21,1,0,0,0,14,15,5,6,0,
+        0,15,16,5,1,0,0,16,17,3,4,2,0,17,18,5,8,0,0,18,21,1,0,0,0,19,21,
+        5,8,0,0,20,11,1,0,0,0,20,14,1,0,0,0,20,19,1,0,0,0,21,3,1,0,0,0,22,
+        23,6,2,-1,0,23,30,5,7,0,0,24,30,5,6,0,0,25,26,5,2,0,0,26,27,3,4,
+        2,0,27,28,5,3,0,0,28,30,1,0,0,0,29,22,1,0,0,0,29,24,1,0,0,0,29,25,
+        1,0,0,0,30,39,1,0,0,0,31,32,10,5,0,0,32,33,5,4,0,0,33,38,3,4,2,6,
+        34,35,10,4,0,0,35,36,5,5,0,0,36,38,3,4,2,5,37,31,1,0,0,0,37,34,1,
+        0,0,0,38,41,1,0,0,0,39,37,1,0,0,0,39,40,1,0,0,0,40,5,1,0,0,0,41,
+        39,1,0,0,0,5,9,20,29,37,39
     ]
 
 class LabeledExprParser ( Parser ):
@@ -36,12 +36,10 @@ class LabeledExprParser ( Parser ):
 
     sharedContextCache = PredictionContextCache()
 
-    literalNames = [ "<INVALID>", "'='", "'('", "')'", "<INVALID>", "<INVALID>", 
-                     "'*'", "'/'", "'+'", "'-'" ]
+    literalNames = [ "<INVALID>", "'='", "'('", "')'" ]
 
     symbolicNames = [ "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
-                      "MULDIV", "ADDSUB", "MUL", "DIV", "ADD", "SUB", "ID", 
-                      "INT", "NEWLINE", "WS" ]
+                      "MULDIV", "ADDSUB", "ID", "INT", "NEWLINE", "WS" ]
 
     RULE_prog = 0
     RULE_stat = 1
@@ -55,14 +53,10 @@ class LabeledExprParser ( Parser ):
     T__2=3
     MULDIV=4
     ADDSUB=5
-    MUL=6
-    DIV=7
-    ADD=8
-    SUB=9
-    ID=10
-    INT=11
-    NEWLINE=12
-    WS=13
+    ID=6
+    INT=7
+    NEWLINE=8
+    WS=9
 
     def __init__(self, input:TokenStream, output:TextIO = sys.stdout):
         super().__init__(input, output)
@@ -90,6 +84,14 @@ class LabeledExprParser ( Parser ):
         def getRuleIndex(self):
             return LabeledExprParser.RULE_prog
 
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterProg" ):
+                listener.enterProg(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitProg" ):
+                listener.exitProg(self)
+
         def accept(self, visitor:ParseTreeVisitor):
             if hasattr( visitor, "visitProg" ):
                 return visitor.visitProg(self)
@@ -115,7 +117,7 @@ class LabeledExprParser ( Parser ):
                 self.state = 9 
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if not ((((_la) & ~0x3f) == 0 and ((1 << _la) & 7172) != 0)):
+                if not ((((_la) & ~0x3f) == 0 and ((1 << _la) & 452) != 0)):
                     break
 
         except RecognitionException as re:
@@ -153,6 +155,14 @@ class LabeledExprParser ( Parser ):
         def NEWLINE(self):
             return self.getToken(LabeledExprParser.NEWLINE, 0)
 
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterBlank" ):
+                listener.enterBlank(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitBlank" ):
+                listener.exitBlank(self)
+
         def accept(self, visitor:ParseTreeVisitor):
             if hasattr( visitor, "visitBlank" ):
                 return visitor.visitBlank(self)
@@ -171,6 +181,14 @@ class LabeledExprParser ( Parser ):
 
         def NEWLINE(self):
             return self.getToken(LabeledExprParser.NEWLINE, 0)
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterPrintExpr" ):
+                listener.enterPrintExpr(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitPrintExpr" ):
+                listener.exitPrintExpr(self)
 
         def accept(self, visitor:ParseTreeVisitor):
             if hasattr( visitor, "visitPrintExpr" ):
@@ -192,6 +210,14 @@ class LabeledExprParser ( Parser ):
 
         def NEWLINE(self):
             return self.getToken(LabeledExprParser.NEWLINE, 0)
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterAssign" ):
+                listener.enterAssign(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitAssign" ):
+                listener.exitAssign(self)
 
         def accept(self, visitor:ParseTreeVisitor):
             if hasattr( visitor, "visitAssign" ):
@@ -279,6 +305,14 @@ class LabeledExprParser ( Parser ):
         def ADDSUB(self):
             return self.getToken(LabeledExprParser.ADDSUB, 0)
 
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterOp2" ):
+                listener.enterOp2(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitOp2" ):
+                listener.exitOp2(self)
+
         def accept(self, visitor:ParseTreeVisitor):
             if hasattr( visitor, "visitOp2" ):
                 return visitor.visitOp2(self)
@@ -301,6 +335,14 @@ class LabeledExprParser ( Parser ):
         def MULDIV(self):
             return self.getToken(LabeledExprParser.MULDIV, 0)
 
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterOp1" ):
+                listener.enterOp1(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitOp1" ):
+                listener.exitOp1(self)
+
         def accept(self, visitor:ParseTreeVisitor):
             if hasattr( visitor, "visitOp1" ):
                 return visitor.visitOp1(self)
@@ -318,6 +360,14 @@ class LabeledExprParser ( Parser ):
             return self.getTypedRuleContext(LabeledExprParser.ExprContext,0)
 
 
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterParens" ):
+                listener.enterParens(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitParens" ):
+                listener.exitParens(self)
+
         def accept(self, visitor:ParseTreeVisitor):
             if hasattr( visitor, "visitParens" ):
                 return visitor.visitParens(self)
@@ -334,6 +384,14 @@ class LabeledExprParser ( Parser ):
         def ID(self):
             return self.getToken(LabeledExprParser.ID, 0)
 
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterId" ):
+                listener.enterId(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitId" ):
+                listener.exitId(self)
+
         def accept(self, visitor:ParseTreeVisitor):
             if hasattr( visitor, "visitId" ):
                 return visitor.visitId(self)
@@ -349,6 +407,14 @@ class LabeledExprParser ( Parser ):
 
         def INT(self):
             return self.getToken(LabeledExprParser.INT, 0)
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterInt" ):
+                listener.enterInt(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitInt" ):
+                listener.exitInt(self)
 
         def accept(self, visitor:ParseTreeVisitor):
             if hasattr( visitor, "visitInt" ):
@@ -370,7 +436,7 @@ class LabeledExprParser ( Parser ):
             self.state = 29
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [11]:
+            if token in [7]:
                 localctx = LabeledExprParser.IntContext(self, localctx)
                 self._ctx = localctx
                 _prevctx = localctx
@@ -378,7 +444,7 @@ class LabeledExprParser ( Parser ):
                 self.state = 23
                 self.match(LabeledExprParser.INT)
                 pass
-            elif token in [10]:
+            elif token in [6]:
                 localctx = LabeledExprParser.IdContext(self, localctx)
                 self._ctx = localctx
                 _prevctx = localctx
