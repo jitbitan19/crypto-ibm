@@ -90,15 +90,16 @@ def main(argv):
     # print(tree_dict)
     tr = Tree()
     tr.dict_to_tree(tree_dict)
-    # tr.bfs()
-    handler = Python3Handler()
-    handler.file_input(tr.root.children[0])
-    print(handler.memory)
+    # tr.dfs_leaf()
 
     tree_json = json.dumps(tree_dict, indent=4)
     pyperclip.copy(tree_json)
     with open("output/out.json", "w") as f:
         f.write(tree_json)
+
+    handler = Python3Handler()
+    handler.file_input(tr.root.children[0])
+    print(handler.memory)
 
 
 if __name__ == "__main__":

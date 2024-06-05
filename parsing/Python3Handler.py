@@ -44,93 +44,93 @@ class Python3Handler:
                 self.assert_stmt(c)
 
     def expr_stmt(self, node: Node):
-        c_val = []
-        for c in node.children:
-            c_val.append(c.value)
-        if "=" in c_val:
-            self.vn = True
-            x = self.test(node.children[0].children[0])
-            self.vn = False
-            y = self.test(node.children[2].children[0])
-            self.memory[x] = y
-        elif "+=" in c_val:
-            self.vn = True
-            x = self.test(node.children[0].children[0])
-            self.vn = False
-            y = self.test(node.children[2].children[0])
-            self.memory[x] += y
-        elif "-=" in c_val:
-            self.vn = True
-            x = self.test(node.children[0].children[0])
-            self.vn = False
-            y = self.test(node.children[2].children[0])
-            self.memory[x] -= y
-        elif "*=" in c_val:
-            self.vn = True
-            x = self.test(node.children[0].children[0])
-            self.vn = False
-            y = self.test(node.children[2].children[0])
-            self.memory[x] *= y
-        elif "@=" in c_val:
-            self.vn = True
-            x = self.test(node.children[0].children[0])
-            self.vn = False
-            y = self.test(node.children[2].children[0])
-            self.memory[x] @= y
-        elif "/=" in c_val:
-            self.vn = True
-            x = self.test(node.children[0].children[0])
-            self.vn = False
-            y = self.test(node.children[2].children[0])
-            self.memory[x] /= y
-        elif "%=" in c_val:
-            self.vn = True
-            x = self.test(node.children[0].children[0])
-            self.vn = False
-            y = self.test(node.children[2].children[0])
-            self.memory[x] %= y
-        elif "&=" in c_val:
-            self.vn = True
-            x = self.test(node.children[0].children[0])
-            self.vn = False
-            y = self.test(node.children[2].children[0])
-            self.memory[x] &= y
-        elif "|=" in c_val:
-            self.vn = True
-            x = self.test(node.children[0].children[0])
-            self.vn = False
-            y = self.test(node.children[2].children[0])
-            self.memory[x] |= y
-        elif "^=" in c_val:
-            self.vn = True
-            x = self.test(node.children[0].children[0])
-            self.vn = False
-            y = self.test(node.children[2].children[0])
-            self.memory[x] ^= y
-        elif "<<=" in c_val:
-            self.vn = True
-            x = self.test(node.children[0].children[0])
-            self.vn = False
-            y = self.test(node.children[2].children[0])
-            self.memory[x] <<= y
-        elif ">>=" in c_val:
-            self.vn = True
-            x = self.test(node.children[0].children[0])
-            self.vn = False
-            y = self.test(node.children[2].children[0])
-            self.memory[x] >>= y
-        elif "**=" in c_val:
-            self.vn = True
-            x = self.test(node.children[0].children[0])
-            self.vn = False
-            y = self.test(node.children[2].children[0])
-            self.memory[x] **= y
-        elif "//=" in c_val:
-            self.vn = True
-            x = self.test(node.children[0].children[0])
-            self.vn = False
-            y = self.test(node.children[2].children[0])
-            self.memory[x] //= y
+        if len(node.children) != 1:
+            val1 = node.children[1].value
+            if val1 == "=":
+                self.vn = True
+                x = self.test(node.children[0].children[0])
+                self.vn = False
+                y = self.test(node.children[2].children[0])
+                self.memory[x] = y
+            else:
+                if node.children[1].children[0].value == "+=":
+                    self.vn = True
+                    x = self.test(node.children[0].children[0])
+                    self.vn = False
+                    y = self.test(node.children[2].children[0])
+                    self.memory[x] += y
+                if node.children[1].children[0].value == "-=":
+                    self.vn = True
+                    x = self.test(node.children[0].children[0])
+                    self.vn = False
+                    y = self.test(node.children[2].children[0])
+                    self.memory[x] -= y
+                if node.children[1].children[0].value == "*=":
+                    self.vn = True
+                    x = self.test(node.children[0].children[0])
+                    self.vn = False
+                    y = self.test(node.children[2].children[0])
+                    self.memory[x] *= y
+                if node.children[1].children[0].value == "@=":
+                    self.vn = True
+                    x = self.test(node.children[0].children[0])
+                    self.vn = False
+                    y = self.test(node.children[2].children[0])
+                    self.memory[x] @= y
+                if node.children[1].children[0].value == "/=":
+                    self.vn = True
+                    x = self.test(node.children[0].children[0])
+                    self.vn = False
+                    y = self.test(node.children[2].children[0])
+                    self.memory[x] /= y
+                if node.children[1].children[0].value == "%=":
+                    self.vn = True
+                    x = self.test(node.children[0].children[0])
+                    self.vn = False
+                    y = self.test(node.children[2].children[0])
+                    self.memory[x] %= y
+                if node.children[1].children[0].value == "&=":
+                    self.vn = True
+                    x = self.test(node.children[0].children[0])
+                    self.vn = False
+                    y = self.test(node.children[2].children[0])
+                    self.memory[x] &= y
+                if node.children[1].children[0].value == "|=":
+                    self.vn = True
+                    x = self.test(node.children[0].children[0])
+                    self.vn = False
+                    y = self.test(node.children[2].children[0])
+                    self.memory[x] |= y
+                if node.children[1].children[0].value == "^=":
+                    self.vn = True
+                    x = self.test(node.children[0].children[0])
+                    self.vn = False
+                    y = self.test(node.children[2].children[0])
+                    self.memory[x] ^= y
+                if node.children[1].children[0].value == "<<=":
+                    self.vn = True
+                    x = self.test(node.children[0].children[0])
+                    self.vn = False
+                    y = self.test(node.children[2].children[0])
+                    self.memory[x] <<= y
+                if node.children[1].children[0].value == ">>=":
+                    self.vn = True
+                    x = self.test(node.children[0].children[0])
+                    self.vn = False
+                    y = self.test(node.children[2].children[0])
+                    self.memory[x] >>= y
+                if node.children[1].children[0].value == "**=":
+                    self.vn = True
+                    x = self.test(node.children[0].children[0])
+                    self.vn = False
+                    y = self.test(node.children[2].children[0])
+                    self.memory[x] **= y
+                if node.children[1].children[0].value == "//=":
+                    self.vn = True
+                    x = self.test(node.children[0].children[0])
+                    self.vn = False
+                    y = self.test(node.children[2].children[0])
+                    self.memory[x] //= y
         else:
             self.vn = True
             y = self.test(node.children[0].children[0])
@@ -201,8 +201,6 @@ class Python3Handler:
             # other math operations
         else:
             # ('+' | '-' | '~')+ expr are ignored
-            x = "a"
-            y = "b"
             c_val = []
             for i in node.children:
                 c_val.append(i.value)
@@ -260,7 +258,7 @@ class Python3Handler:
                 y = self.expr(node.children[2])
                 return x | y
 
-    # only atom is added no trailer yet
+    # trailer not added
     def atom_expr(self, node: Node):
         if len(node.children) == 1:
             return self.atom(node.children[0])
@@ -278,9 +276,16 @@ class Python3Handler:
                 if self.vn:
                     return node.children[0].children[0].value
                 else:
-                    return int(self.memory[node.children[0].children[0].value])
+                    return self.memory[node.children[0].children[0].value]
+            if '"' in x:
+                return x.strip('"')
             else:
-                return int(x)
+                if "." in x:
+                    return float(x)
+                else:
+                    return int(x)
+        else:
+            return self.test(node.children[1].children[0])
 
     def del_stmt(self, node: Node):
         pass
