@@ -7,6 +7,67 @@
                         {
                             "simple_stmt": [
                                 {
+                                    "import_stmt": [
+                                        {
+                                            "import_from": [
+                                                "from",
+                                                {
+                                                    "dotted_name": [
+                                                        {
+                                                            "name": [
+                                                                "Crypto"
+                                                            ]
+                                                        },
+                                                        ".",
+                                                        {
+                                                            "name": [
+                                                                "Hash"
+                                                            ]
+                                                        }
+                                                    ]
+                                                },
+                                                "import",
+                                                {
+                                                    "import_as_names": [
+                                                        {
+                                                            "import_as_name": [
+                                                                {
+                                                                    "name": [
+                                                                        "SHA3_256"
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        },
+                                                        ",",
+                                                        {
+                                                            "import_as_name": [
+                                                                {
+                                                                    "name": [
+                                                                        "BLAKE2s"
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        "\n"
+                    ]
+                }
+            ]
+        },
+        {
+            "stmt": [
+                {
+                    "simple_stmts": [
+                        {
+                            "simple_stmt": [
+                                {
                                     "expr_stmt": [
                                         {
                                             "testlist_star_expr": [
@@ -457,123 +518,61 @@
                                                                                                 {
                                                                                                     "expr": [
                                                                                                         {
-                                                                                                            "expr": [
+                                                                                                            "atom_expr": [
                                                                                                                 {
-                                                                                                                    "atom_expr": [
+                                                                                                                    "atom": [
+                                                                                                                        "(",
                                                                                                                         {
-                                                                                                                            "atom": [
-                                                                                                                                "(",
+                                                                                                                            "testlist_comp": [
                                                                                                                                 {
-                                                                                                                                    "testlist_comp": [
+                                                                                                                                    "test": [
                                                                                                                                         {
-                                                                                                                                            "test": [
+                                                                                                                                            "or_test": [
                                                                                                                                                 {
-                                                                                                                                                    "or_test": [
+                                                                                                                                                    "and_test": [
                                                                                                                                                         {
-                                                                                                                                                            "and_test": [
+                                                                                                                                                            "not_test": [
                                                                                                                                                                 {
-                                                                                                                                                                    "not_test": [
+                                                                                                                                                                    "comparison": [
                                                                                                                                                                         {
-                                                                                                                                                                            "comparison": [
+                                                                                                                                                                            "expr": [
                                                                                                                                                                                 {
-                                                                                                                                                                                    "expr": [
+                                                                                                                                                                                    "atom_expr": [
                                                                                                                                                                                         {
-                                                                                                                                                                                            "expr": [
+                                                                                                                                                                                            "atom": [
                                                                                                                                                                                                 {
-                                                                                                                                                                                                    "atom_expr": [
-                                                                                                                                                                                                        {
-                                                                                                                                                                                                            "atom": [
-                                                                                                                                                                                                                "1"
-                                                                                                                                                                                                            ]
-                                                                                                                                                                                                        }
+                                                                                                                                                                                                    "name": [
+                                                                                                                                                                                                        "b"
                                                                                                                                                                                                     ]
                                                                                                                                                                                                 }
                                                                                                                                                                                             ]
-                                                                                                                                                                                        },
-                                                                                                                                                                                        "+",
+                                                                                                                                                                                        }
+                                                                                                                                                                                    ]
+                                                                                                                                                                                }
+                                                                                                                                                                            ]
+                                                                                                                                                                        }
+                                                                                                                                                                    ]
+                                                                                                                                                                }
+                                                                                                                                                            ]
+                                                                                                                                                        }
+                                                                                                                                                    ]
+                                                                                                                                                },
+                                                                                                                                                "or",
+                                                                                                                                                {
+                                                                                                                                                    "and_test": [
+                                                                                                                                                        {
+                                                                                                                                                            "not_test": [
+                                                                                                                                                                {
+                                                                                                                                                                    "comparison": [
+                                                                                                                                                                        {
+                                                                                                                                                                            "expr": [
+                                                                                                                                                                                {
+                                                                                                                                                                                    "atom_expr": [
                                                                                                                                                                                         {
-                                                                                                                                                                                            "expr": [
+                                                                                                                                                                                            "atom": [
                                                                                                                                                                                                 {
-                                                                                                                                                                                                    "expr": [
-                                                                                                                                                                                                        {
-                                                                                                                                                                                                            "atom_expr": [
-                                                                                                                                                                                                                {
-                                                                                                                                                                                                                    "atom": [
-                                                                                                                                                                                                                        "(",
-                                                                                                                                                                                                                        {
-                                                                                                                                                                                                                            "testlist_comp": [
-                                                                                                                                                                                                                                {
-                                                                                                                                                                                                                                    "test": [
-                                                                                                                                                                                                                                        {
-                                                                                                                                                                                                                                            "or_test": [
-                                                                                                                                                                                                                                                {
-                                                                                                                                                                                                                                                    "and_test": [
-                                                                                                                                                                                                                                                        {
-                                                                                                                                                                                                                                                            "not_test": [
-                                                                                                                                                                                                                                                                {
-                                                                                                                                                                                                                                                                    "comparison": [
-                                                                                                                                                                                                                                                                        {
-                                                                                                                                                                                                                                                                            "expr": [
-                                                                                                                                                                                                                                                                                {
-                                                                                                                                                                                                                                                                                    "expr": [
-                                                                                                                                                                                                                                                                                        {
-                                                                                                                                                                                                                                                                                            "atom_expr": [
-                                                                                                                                                                                                                                                                                                {
-                                                                                                                                                                                                                                                                                                    "atom": [
-                                                                                                                                                                                                                                                                                                        "4"
-                                                                                                                                                                                                                                                                                                    ]
-                                                                                                                                                                                                                                                                                                }
-                                                                                                                                                                                                                                                                                            ]
-                                                                                                                                                                                                                                                                                        }
-                                                                                                                                                                                                                                                                                    ]
-                                                                                                                                                                                                                                                                                },
-                                                                                                                                                                                                                                                                                "+",
-                                                                                                                                                                                                                                                                                {
-                                                                                                                                                                                                                                                                                    "expr": [
-                                                                                                                                                                                                                                                                                        {
-                                                                                                                                                                                                                                                                                            "atom_expr": [
-                                                                                                                                                                                                                                                                                                {
-                                                                                                                                                                                                                                                                                                    "atom": [
-                                                                                                                                                                                                                                                                                                        "2"
-                                                                                                                                                                                                                                                                                                    ]
-                                                                                                                                                                                                                                                                                                }
-                                                                                                                                                                                                                                                                                            ]
-                                                                                                                                                                                                                                                                                        }
-                                                                                                                                                                                                                                                                                    ]
-                                                                                                                                                                                                                                                                                }
-                                                                                                                                                                                                                                                                            ]
-                                                                                                                                                                                                                                                                        }
-                                                                                                                                                                                                                                                                    ]
-                                                                                                                                                                                                                                                                }
-                                                                                                                                                                                                                                                            ]
-                                                                                                                                                                                                                                                        }
-                                                                                                                                                                                                                                                    ]
-                                                                                                                                                                                                                                                }
-                                                                                                                                                                                                                                            ]
-                                                                                                                                                                                                                                        }
-                                                                                                                                                                                                                                    ]
-                                                                                                                                                                                                                                }
-                                                                                                                                                                                                                            ]
-                                                                                                                                                                                                                        },
-                                                                                                                                                                                                                        ")"
-                                                                                                                                                                                                                    ]
-                                                                                                                                                                                                                }
-                                                                                                                                                                                                            ]
-                                                                                                                                                                                                        }
-                                                                                                                                                                                                    ]
-                                                                                                                                                                                                },
-                                                                                                                                                                                                "*",
-                                                                                                                                                                                                {
-                                                                                                                                                                                                    "expr": [
-                                                                                                                                                                                                        {
-                                                                                                                                                                                                            "atom_expr": [
-                                                                                                                                                                                                                {
-                                                                                                                                                                                                                    "atom": [
-                                                                                                                                                                                                                        "2"
-                                                                                                                                                                                                                    ]
-                                                                                                                                                                                                                }
-                                                                                                                                                                                                            ]
-                                                                                                                                                                                                        }
+                                                                                                                                                                                                    "name": [
+                                                                                                                                                                                                        "c"
                                                                                                                                                                                                     ]
                                                                                                                                                                                                 }
                                                                                                                                                                                             ]
@@ -591,35 +590,17 @@
                                                                                                                                             ]
                                                                                                                                         }
                                                                                                                                     ]
-                                                                                                                                },
-                                                                                                                                ")"
-                                                                                                                            ]
-                                                                                                                        }
-                                                                                                                    ]
-                                                                                                                }
-                                                                                                            ]
-                                                                                                        },
-                                                                                                        "**",
-                                                                                                        {
-                                                                                                            "expr": [
-                                                                                                                {
-                                                                                                                    "atom_expr": [
-                                                                                                                        {
-                                                                                                                            "atom": [
-                                                                                                                                {
-                                                                                                                                    "name": [
-                                                                                                                                        "b"
-                                                                                                                                    ]
                                                                                                                                 }
                                                                                                                             ]
-                                                                                                                        }
+                                                                                                                        },
+                                                                                                                        ")"
                                                                                                                     ]
                                                                                                                 }
                                                                                                             ]
                                                                                                         }
                                                                                                     ]
                                                                                                 },
-                                                                                                "+",
+                                                                                                "*",
                                                                                                 {
                                                                                                     "expr": [
                                                                                                         {
@@ -628,11 +609,463 @@
                                                                                                                     "atom": [
                                                                                                                         {
                                                                                                                             "name": [
-                                                                                                                                "c"
+                                                                                                                                "a"
                                                                                                                             ]
                                                                                                                         }
                                                                                                                     ]
                                                                                                                 }
+                                                                                                            ]
+                                                                                                        }
+                                                                                                    ]
+                                                                                                }
+                                                                                            ]
+                                                                                        }
+                                                                                    ]
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        "\n"
+                    ]
+                }
+            ]
+        },
+        {
+            "stmt": [
+                {
+                    "simple_stmts": [
+                        {
+                            "simple_stmt": [
+                                {
+                                    "expr_stmt": [
+                                        {
+                                            "testlist_star_expr": [
+                                                {
+                                                    "test": [
+                                                        {
+                                                            "or_test": [
+                                                                {
+                                                                    "and_test": [
+                                                                        {
+                                                                            "not_test": [
+                                                                                {
+                                                                                    "comparison": [
+                                                                                        {
+                                                                                            "expr": [
+                                                                                                {
+                                                                                                    "atom_expr": [
+                                                                                                        {
+                                                                                                            "atom": [
+                                                                                                                {
+                                                                                                                    "name": [
+                                                                                                                        "msg"
+                                                                                                                    ]
+                                                                                                                }
+                                                                                                            ]
+                                                                                                        }
+                                                                                                    ]
+                                                                                                }
+                                                                                            ]
+                                                                                        }
+                                                                                    ]
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        "=",
+                                        {
+                                            "testlist_star_expr": [
+                                                {
+                                                    "test": [
+                                                        {
+                                                            "or_test": [
+                                                                {
+                                                                    "and_test": [
+                                                                        {
+                                                                            "not_test": [
+                                                                                {
+                                                                                    "comparison": [
+                                                                                        {
+                                                                                            "expr": [
+                                                                                                {
+                                                                                                    "atom_expr": [
+                                                                                                        {
+                                                                                                            "atom": [
+                                                                                                                "\"Hello\""
+                                                                                                            ]
+                                                                                                        }
+                                                                                                    ]
+                                                                                                }
+                                                                                            ]
+                                                                                        }
+                                                                                    ]
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        "\n"
+                    ]
+                }
+            ]
+        },
+        {
+            "stmt": [
+                {
+                    "simple_stmts": [
+                        {
+                            "simple_stmt": [
+                                {
+                                    "expr_stmt": [
+                                        {
+                                            "testlist_star_expr": [
+                                                {
+                                                    "test": [
+                                                        {
+                                                            "or_test": [
+                                                                {
+                                                                    "and_test": [
+                                                                        {
+                                                                            "not_test": [
+                                                                                {
+                                                                                    "comparison": [
+                                                                                        {
+                                                                                            "expr": [
+                                                                                                {
+                                                                                                    "atom_expr": [
+                                                                                                        {
+                                                                                                            "atom": [
+                                                                                                                {
+                                                                                                                    "name": [
+                                                                                                                        "h1"
+                                                                                                                    ]
+                                                                                                                }
+                                                                                                            ]
+                                                                                                        }
+                                                                                                    ]
+                                                                                                }
+                                                                                            ]
+                                                                                        }
+                                                                                    ]
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        "=",
+                                        {
+                                            "testlist_star_expr": [
+                                                {
+                                                    "test": [
+                                                        {
+                                                            "or_test": [
+                                                                {
+                                                                    "and_test": [
+                                                                        {
+                                                                            "not_test": [
+                                                                                {
+                                                                                    "comparison": [
+                                                                                        {
+                                                                                            "expr": [
+                                                                                                {
+                                                                                                    "atom_expr": [
+                                                                                                        {
+                                                                                                            "atom": [
+                                                                                                                {
+                                                                                                                    "name": [
+                                                                                                                        "SHA3_256"
+                                                                                                                    ]
+                                                                                                                }
+                                                                                                            ]
+                                                                                                        },
+                                                                                                        {
+                                                                                                            "trailer": [
+                                                                                                                ".",
+                                                                                                                {
+                                                                                                                    "name": [
+                                                                                                                        "new"
+                                                                                                                    ]
+                                                                                                                }
+                                                                                                            ]
+                                                                                                        },
+                                                                                                        {
+                                                                                                            "trailer": [
+                                                                                                                "(",
+                                                                                                                ")"
+                                                                                                            ]
+                                                                                                        }
+                                                                                                    ]
+                                                                                                }
+                                                                                            ]
+                                                                                        }
+                                                                                    ]
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        "\n"
+                    ]
+                }
+            ]
+        },
+        {
+            "stmt": [
+                {
+                    "simple_stmts": [
+                        {
+                            "simple_stmt": [
+                                {
+                                    "expr_stmt": [
+                                        {
+                                            "testlist_star_expr": [
+                                                {
+                                                    "test": [
+                                                        {
+                                                            "or_test": [
+                                                                {
+                                                                    "and_test": [
+                                                                        {
+                                                                            "not_test": [
+                                                                                {
+                                                                                    "comparison": [
+                                                                                        {
+                                                                                            "expr": [
+                                                                                                {
+                                                                                                    "atom_expr": [
+                                                                                                        {
+                                                                                                            "atom": [
+                                                                                                                {
+                                                                                                                    "name": [
+                                                                                                                        "h1"
+                                                                                                                    ]
+                                                                                                                }
+                                                                                                            ]
+                                                                                                        },
+                                                                                                        {
+                                                                                                            "trailer": [
+                                                                                                                ".",
+                                                                                                                {
+                                                                                                                    "name": [
+                                                                                                                        "update"
+                                                                                                                    ]
+                                                                                                                }
+                                                                                                            ]
+                                                                                                        },
+                                                                                                        {
+                                                                                                            "trailer": [
+                                                                                                                "(",
+                                                                                                                {
+                                                                                                                    "arglist": [
+                                                                                                                        {
+                                                                                                                            "argument": [
+                                                                                                                                {
+                                                                                                                                    "test": [
+                                                                                                                                        {
+                                                                                                                                            "or_test": [
+                                                                                                                                                {
+                                                                                                                                                    "and_test": [
+                                                                                                                                                        {
+                                                                                                                                                            "not_test": [
+                                                                                                                                                                {
+                                                                                                                                                                    "comparison": [
+                                                                                                                                                                        {
+                                                                                                                                                                            "expr": [
+                                                                                                                                                                                {
+                                                                                                                                                                                    "atom_expr": [
+                                                                                                                                                                                        {
+                                                                                                                                                                                            "atom": [
+                                                                                                                                                                                                {
+                                                                                                                                                                                                    "name": [
+                                                                                                                                                                                                        "msg"
+                                                                                                                                                                                                    ]
+                                                                                                                                                                                                }
+                                                                                                                                                                                            ]
+                                                                                                                                                                                        },
+                                                                                                                                                                                        {
+                                                                                                                                                                                            "trailer": [
+                                                                                                                                                                                                ".",
+                                                                                                                                                                                                {
+                                                                                                                                                                                                    "name": [
+                                                                                                                                                                                                        "encode"
+                                                                                                                                                                                                    ]
+                                                                                                                                                                                                }
+                                                                                                                                                                                            ]
+                                                                                                                                                                                        },
+                                                                                                                                                                                        {
+                                                                                                                                                                                            "trailer": [
+                                                                                                                                                                                                "(",
+                                                                                                                                                                                                ")"
+                                                                                                                                                                                            ]
+                                                                                                                                                                                        }
+                                                                                                                                                                                    ]
+                                                                                                                                                                                }
+                                                                                                                                                                            ]
+                                                                                                                                                                        }
+                                                                                                                                                                    ]
+                                                                                                                                                                }
+                                                                                                                                                            ]
+                                                                                                                                                        }
+                                                                                                                                                    ]
+                                                                                                                                                }
+                                                                                                                                            ]
+                                                                                                                                        }
+                                                                                                                                    ]
+                                                                                                                                }
+                                                                                                                            ]
+                                                                                                                        }
+                                                                                                                    ]
+                                                                                                                },
+                                                                                                                ")"
+                                                                                                            ]
+                                                                                                        }
+                                                                                                    ]
+                                                                                                }
+                                                                                            ]
+                                                                                        }
+                                                                                    ]
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        "\n"
+                    ]
+                }
+            ]
+        },
+        {
+            "stmt": [
+                {
+                    "simple_stmts": [
+                        {
+                            "simple_stmt": [
+                                {
+                                    "expr_stmt": [
+                                        {
+                                            "testlist_star_expr": [
+                                                {
+                                                    "test": [
+                                                        {
+                                                            "or_test": [
+                                                                {
+                                                                    "and_test": [
+                                                                        {
+                                                                            "not_test": [
+                                                                                {
+                                                                                    "comparison": [
+                                                                                        {
+                                                                                            "expr": [
+                                                                                                {
+                                                                                                    "atom_expr": [
+                                                                                                        {
+                                                                                                            "atom": [
+                                                                                                                {
+                                                                                                                    "name": [
+                                                                                                                        "print"
+                                                                                                                    ]
+                                                                                                                }
+                                                                                                            ]
+                                                                                                        },
+                                                                                                        {
+                                                                                                            "trailer": [
+                                                                                                                "(",
+                                                                                                                {
+                                                                                                                    "arglist": [
+                                                                                                                        {
+                                                                                                                            "argument": [
+                                                                                                                                {
+                                                                                                                                    "test": [
+                                                                                                                                        {
+                                                                                                                                            "or_test": [
+                                                                                                                                                {
+                                                                                                                                                    "and_test": [
+                                                                                                                                                        {
+                                                                                                                                                            "not_test": [
+                                                                                                                                                                {
+                                                                                                                                                                    "comparison": [
+                                                                                                                                                                        {
+                                                                                                                                                                            "expr": [
+                                                                                                                                                                                {
+                                                                                                                                                                                    "atom_expr": [
+                                                                                                                                                                                        {
+                                                                                                                                                                                            "atom": [
+                                                                                                                                                                                                "f\"SHA3-256   of '{msg}': {h1.hexdigest()}\""
+                                                                                                                                                                                            ]
+                                                                                                                                                                                        }
+                                                                                                                                                                                    ]
+                                                                                                                                                                                }
+                                                                                                                                                                            ]
+                                                                                                                                                                        }
+                                                                                                                                                                    ]
+                                                                                                                                                                }
+                                                                                                                                                            ]
+                                                                                                                                                        }
+                                                                                                                                                    ]
+                                                                                                                                                }
+                                                                                                                                            ]
+                                                                                                                                        }
+                                                                                                                                    ]
+                                                                                                                                }
+                                                                                                                            ]
+                                                                                                                        }
+                                                                                                                    ]
+                                                                                                                },
+                                                                                                                ")"
                                                                                                             ]
                                                                                                         }
                                                                                                     ]

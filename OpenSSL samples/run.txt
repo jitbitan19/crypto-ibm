@@ -1,0 +1,1 @@
+g++ --std=c++17 b.cpp -o b -I/opt/homebrew/Cellar/openssl@3/3.3.1/include -L/opt/homebrew/Cellar/openssl@3/3.3.1/lib -lcrypto -lssl && ./b

@@ -5,6 +5,7 @@ from Node import Node
 class Python3Handler:
     def __init__(self) -> None:
         self.memory = {}
+        self.package_lib = {}
         self.vn = False
 
     def file_input(self, node: Node):
@@ -43,6 +44,7 @@ class Python3Handler:
             elif c.value == "assert_stmt":
                 self.assert_stmt(c)
 
+    # Assignment operations
     def expr_stmt(self, node: Node):
         if len(node.children) != 1:
             val1 = node.children[1].value
@@ -137,6 +139,7 @@ class Python3Handler:
             self.vn = False
             # print(y)
 
+    # _____Testlist start
     def test(self, node: Node):
         if len(node.children) == 1:
             return self.or_test(node.children[0])
@@ -195,6 +198,9 @@ class Python3Handler:
             elif "is not" in node.children:
                 return self.expr(node.children[0]) is not self.expr(node.children[2])
 
+    # _____Testlist end
+
+    # _____Expression handling start
     def expr(self, node: Node):
         if len(node.children) == 1:
             return self.atom_expr(node.children[0])
@@ -262,6 +268,8 @@ class Python3Handler:
     def atom_expr(self, node: Node):
         if len(node.children) == 1:
             return self.atom(node.children[0])
+        else:
+            pass
 
     def atom(self, node: Node, vn=False):
         if len(node.children) == 1:
@@ -287,6 +295,8 @@ class Python3Handler:
         else:
             return self.test(node.children[1].children[0])
 
+    # _____Expression handling end
+
     def del_stmt(self, node: Node):
         pass
 
@@ -296,8 +306,55 @@ class Python3Handler:
     def flow_stmt(self, node: Node):
         pass
 
+    # import from not added
     def import_stmt(self, node: Node):
+        if node.children[0].value == "import_name":
+            self.import_name(node.children[0])
+        else:
+            self.import_from(node.children[0])
+
+    def import_name(self, node: Node):
+        exec(f"import {self.dotted_as_names(node.children[1])}")
+
+    def import_from(self, node: Node):
         pass
+
+    def import_as_name(self, node: Node):
+        pass
+
+    def dotted_as_names(self, node: Node):
+        if len(node.children) == 1:
+            return self.dotted_as_name(node.children[0])
+        else:
+            x = []
+            for c in node.children:
+                if c.value != ",":
+                    x.append(self.dotted_as_name(c))
+            return ",".join(x)
+
+    def dotted_as_name(self, node: Node):
+        if len(node.children) == 1:
+            return self.dotted_name(node.children[0])
+        else:
+            x = self.dotted_name(node.children[0])  # package name
+            y = self.name(node.children[2])  # package alias
+            self.package_lib[y] = x
+            return x
+
+    def import_as_name(self, node: Node):
+        pass
+
+    def dotted_name(self, node: Node):
+        if len(node.children) == 1:
+            return self.name(node.children[0])
+        else:
+            x = []
+            for c in node.children:
+                x.append(self.name(c))
+            return ".".join(x)
+
+    def name(self, node: Node):
+        return node.children[0].value
 
     def global_stmt(self, node: Node):
         pass
